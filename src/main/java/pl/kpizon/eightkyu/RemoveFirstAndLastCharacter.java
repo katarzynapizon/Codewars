@@ -9,6 +9,14 @@ You don't have to worry with strings with less than two characters.
 public class RemoveFirstAndLastCharacter {
 
     public static String remove(String str) {
-        return "";
+        return new StringBuilder(str)
+                .deleteCharAt(str.length() - 1)
+                .deleteCharAt(0)
+                .toString();
     }
+
+    public static String remove2(String str) {
+        return str.substring(1, str.length() - 1);
+    }
+
 }
